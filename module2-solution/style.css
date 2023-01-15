@@ -1,1 +1,88 @@
-Dummy Text
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.heading {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box {
+    border: 1px solid black;
+    width: 430px;
+    height: 145px;
+    background-color: rgb(167, 166, 166);
+}
+
+.chicken, .beef, .sushi {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text {
+    margin: 10px;
+}
+
+.chicken p {
+    padding: 4px 30px;
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+    background-color: pink;
+}
+
+.beef p {
+    padding: 4px 30px;
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+    background-color: red;
+    color: white;
+}
+
+.sushi p {
+    padding: 4px 30px;
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+    background-color: bisque;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 1290px;
+}
+
+/* media query */
+
+/* for tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box3 {
+        display: grid;
+        grid-column: 1 / span 2;
+    }
+}
